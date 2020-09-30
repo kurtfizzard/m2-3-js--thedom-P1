@@ -7,10 +7,21 @@
 //
 // - If the array contains any values that are not a number, the function should return undefined.
 
-function sum(arr) {
-  // Your code here
-}
-
+  function sum(arr) {
+  let total = 0;
+  if (
+    !Array.isArray(arr) || 
+    !arr.every(function(num) {return typeof num === "number"})
+    ) {
+    return undefined;
+    } else {
+    
+  arr.forEach((element) => {
+  total += element;
+  });
+  return total;
+  }
+  }
 // Part 2 - Test
 // --------------
 // Test your function.

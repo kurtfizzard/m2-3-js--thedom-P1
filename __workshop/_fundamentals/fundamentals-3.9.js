@@ -15,8 +15,16 @@
 //  - `forEach` might be helpful
 
 function longestWord(str) {
-  // Place solution here
+  let longest = "";
+  str.split(" ").forEach((element) => {
+    if (element.length > longest.length) {
+      longest = element;
+    }
+  });
+  return longest;
 }
+
+// (longest = element.length > longest.length ? element : longest)
 
 // Part 2 - Test
 // --------------

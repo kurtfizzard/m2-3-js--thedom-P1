@@ -5,14 +5,25 @@
 // Write a function that expects an array of 2 numbers as input (e.g. [1, 2])
 // and returns the sum of the two numbers.
 //
-// - If anything other than an array with 2 numbers is passed, return undefined.
+// - If anytdhing other than an array with 2 numbers is passe, return undefined.
 //
 // HINT: You can use the typeof function to check the type of each element:
 // `typeof 3` returns 'number'
 
 function sum(arr) {
-  // Your code here
-}
+  let total = 0;
+ if (
+     !Array.isArray(arr) || 
+     arr.length !== 2 || 
+     typeof arr[0] !== "number" || 
+     typeof arr[1] !== "number") {
+ 
+   return undefined;
+ } else {
+   total = arr[0] + arr[1];
+ }
+   return total;
+ }
 
 // Part 2 - Test
 // --------------

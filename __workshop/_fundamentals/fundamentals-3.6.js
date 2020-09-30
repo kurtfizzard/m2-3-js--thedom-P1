@@ -18,7 +18,29 @@
 // calculator(["add", 10, 20]); // 30
 
 function calculator(arr) {
-  // Your code here
+if (
+  !Array.isArray(arr) ||
+  !arr.length === 3 ||
+  !arr[0] === "string" ||
+  !arr[1] === "number" ||
+  !arr[2] === "number"
+) {
+  return undefined;
+} else 
+    switch(arr[0]) {
+    case "add":
+      return arr[1]+arr[2];
+    case "sub":
+      return arr[1]-arr[2];
+    case "mul":
+      return arr[1]*arr[2];
+    case "div":
+      if(arr[2] === 0) {
+        return undefined;
+      }
+      default:
+        return undefined;
+}
 }
 
 // Part 2 - Test
